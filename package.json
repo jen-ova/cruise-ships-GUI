@@ -1,0 +1,22 @@
+{
+  "name": "cruise-ships",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "clear && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jen-ova/cruise-ships.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jen-ova/cruise-ships/issues"
+  },
+  "homepage": "https://github.com/jen-ova/cruise-ships#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
