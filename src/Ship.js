@@ -1,3 +1,4 @@
+(function exportShip() {
 class Ship {
     constructor(name, itinerary) {
         this.shipName = name;
@@ -28,5 +29,10 @@ class Ship {
         this.currentPort.addShip(this);
     }
 };
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = Ship;
+    } else {
+        window.Ship = Ship;
+    }
 
-module.exports = Ship;
+}());

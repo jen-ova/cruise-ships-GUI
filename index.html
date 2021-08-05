@@ -10,11 +10,20 @@
 </head>
 <body>
     <div id="viewport">
-
+        <div id="ports">
+        </div>
     </div>
     <script src="src/controller.js"></script>
+    <script src="src/port.js"></script>
+    <script src="src/Itinerary.js"></script>
     <script>
+        const qarth = new Port("Qarth");
+        const astapor = new Port("Astapor");
+        const yunkai = new Port("Yunkai");
+        const meereen = new Port("Meereen");
+        const itinerary = new Itinerary([qarth, astapor, yunkai, meereen])
         const controller = new Controller();
+        controller.renderPorts(itinerary.ports);
     </script>
 </body>
 </html>
