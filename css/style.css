@@ -14,24 +14,51 @@ body {
     height: 256px;
     position: relative;
     overflow-x: auto;
-    background-image: url("../images/water0.png")
+}
+
+#viewport__inner {
+    background-image: url("../images/water0.png");
+    height: 100%;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #ports {
-    margin-top: 96px;
     display: flex;
     justify-content: space-around;
 }
 
-#ports > .port {
+.port {
     width: 64px;
     height: 32px;
     background-image: url("../images/port.png");
 }
 
 #ship {
-    width: 128px;
+    width: 61px;
     height: 64px;
-    background-image: url("../images/ship.png");
+    background-image: url("../images/lapras.png");
     position: absolute;
+}
+
+#sailbutton {
+    border: 0;
+    background-color: #FB3640;
+    border-bottom: 4px solid #d8040f;
+    color: white;
+    font-family: inherit;
+    padding: 10px 20px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#sailbutton:focus {
+    background-color: #d8040f;
+    border-bottom-width: 0;
+    padding-top: 14px;;
 }

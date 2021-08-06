@@ -11,7 +11,7 @@
             ];
             let backgroundIndex = 0;
             window.setInterval(() => {
-                document.querySelector('#viewport').style.backgroundImage = `url('${backgrounds[backgroundIndex % backgrounds.length]}')`;
+                document.querySelector('#viewport__inner').style.backgroundImage = `url('${backgrounds[backgroundIndex % backgrounds.length]}')`;
                 backgroundIndex += 1;
             }, 1000);
         };
