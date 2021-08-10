@@ -65,8 +65,10 @@ class Controller {
 		);
 
 		if (!nextPortElement) {
-			return alert("End of the line!");
+			return alert("End of the line! Please disembark");
 		}
+
+		this.renderMessage(`Now departing ${ship.currentPort.portName}`);
 
 		const shipElement = document.querySelector("#ship");
 		const sailInterval = setInterval(() => {
@@ -79,6 +81,19 @@ class Controller {
 
 			shipElement.style.left = `${shipLeft + 1}px`;
 		}, 20);
+	}
+
+	renderMessage(message) {
+		const messageElement = document.createElement("div");
+		messageElement.id = "message";
+		messageElement.innerHTML = message;
+
+		const viewport = document.querySelector("#viewport");
+		viewport.appendChild(messageElement);
+
+		setTimeout(() => {
+			viewport.removeChild(messageElement);
+		}, 2000);
 	}
 }
 
